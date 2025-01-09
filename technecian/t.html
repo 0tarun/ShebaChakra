@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technician Services</title>
+    <link rel="stylesheet" href="t.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="SHEBACHAKRA Logo">
+            <span>SHEBACHAKRA<br>Multi-Service Aggregator</span>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+        </div>
+        <nav class="menu">
+            <a href="#message">Message</a>
+            <a href="#home">Home</a>
+            <a href="#cart">Cart</a>
+            <a href="#login">Login</a>
+        </nav>
+    </header>
+
+    <div class="services">
+        <div class="service">
+            <h3>Electrical Repairs</h3>
+            <img src="electrical.jpeg" alt="Electrical Repair Service" style="width:100%; height:50%;">
+            <p class="price">500 tk per hour</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        
+        <div class="service">
+            <h3>Plumbing Services</h3>
+            <img src="plumbing.jpg" alt="Plumbing Service" style="width:100%; height:50%;">
+            <p class="price">600 tk per hour</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="service">
+            <h3>Electrical Point services</h3>
+            <img src="electrical_point.jpg" alt="Electrical Point Services" style="width:100%; height:50%;">
+            <p class="price">500 tk per service</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        
+    </div>
+
+    <div class="services">
+        <div class="service">
+            <h3>Oven Repair Services</h3>
+            <img src="oven.jpg" alt="Oven Repair Services" style="width:100%; height:50%;">
+            <p class="price">1000 tk per service</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="service">
+            <h3>Rice Cooker Repairs</h3>
+            <img src="rice_cooker.jpeg" alt="Rice Repair Service" style="width:100%; height:50%;">
+            <p class="price">500 tk per service</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="service">
+            <h3>AC Repairs</h3>
+            <img src="ac.jpg" alt="AC Repair Service" style="width:100%; height:50%;">
+            <p class="price">1000 tk per service</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="services">
+        <div class="service">
+            <h3>Fan Repair</h3>
+            <img src="fan.jpg" alt="Fan Repair Service" style="width:100%; height:50%;">
+            <p class="price">1000 tk per service</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="service">
+            <h3>Washing Machine Repair</h3>
+            <img src="washingMachine.jpg" alt="Washing Machine Repair Service" style="width:100%; height:50%;">
+            <p class="price">1000 tk per service</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="service">
+            <h3>Fridge Repair</h3>
+            <img src="fridge.jpg" alt="Fridge Repair Service" style="width:100%; height:50%;">
+            <p class="price">1000 tk per service</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="services">
+        <div class="service">
+            <h3>Gas Stove Services</h3>
+            <img src="gas_stove.png" alt="Gas Stove Services" style="width:100%; height:50%;">
+            <p class="price">300 tk per service</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="service">
+            <h3>Induction Cooker Repair </h3>
+            <img src="induction.jpeg" alt="Induction Cooker Repair Services" style="width:100%; height:50%;">
+            <p class="price">700 tk per service</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="service">
+            <h3>Room Heater Repair </h3>
+            <img src="room_heater.jpg" alt="Room Heater Repair Service" style="width:100%; height:50%;">
+            <p class="price">400 tk per service</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <a href="cart.html" class="cart" id="cart">0</a>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById('cart').textContent = cartCount;
+        }
+    </script>
+</body>
+</html>
