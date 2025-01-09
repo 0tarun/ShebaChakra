@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness and Wellness Schedule</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .fitness-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to bottom, #9dbbdc, #a3b5c9);
+            color: #fff;
+        }
+
+        .fitness-section h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .fitness-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .fitness-cards {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: stretch;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            width: 300px;
+            text-align: center;
+            flex-shrink: 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Time Schedule Section */
+        .schedule-section {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .schedule-section h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+            font-size: 2rem;
+        }
+
+        table {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        table th,
+        table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #007bff;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        table td {
+            color: #555;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fitness Section -->
+    <section class="fitness-section">
+        <h2>Fitness and Wellness Programs</h2>
+        <p>Choose a program that suits your lifestyle and fitness goals.</p>
+        <div class="fitness-cards">
+            <div class="card">
+                <h3>Beginner's Workout Plan</h3>
+                <p>Get started with easy exercises for beginners.</p>
+                <button>Join Now</button>
+            </div>
+            <div class="card">
+                <h3>Yoga and Flexibility</h3>
+                <p>Enhance your flexibility and reduce stress with yoga.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="card">
+                <h3>Weight Loss Program</h3>
+                <p>Burn calories and achieve your weight loss goals.</p>
+                <button>Sign Up</button>
+            </div>
+            <div class="card">
+                <h3>Mental Wellness</h3>
+                <p>Join guided meditation and mindfulness sessions.</p>
+                <button>Explore</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Time Schedule Section -->
+    <section class="schedule-section">
+        <h3>Time Schedule for Fitness and Wellness Programs</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Program</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Beginner's Workout Plan</td>
+                    <td>7:00 AM</td>
+                    <td>8:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Yoga and Flexibility</td>
+                    <td>9:00 AM</td>
+                    <td>10:30 AM</td>
+                </tr>
+                <tr>
+                    <td>Weight Loss Program</td>
+                    <td>11:00 AM</td>
+                    <td>12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Mental Wellness</td>
+                    <td>2:00 PM</td>
+                    <td>3:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Guided Meditation</td>
+                    <td>4:00 PM</td>
+                    <td>5:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+
+</html>
