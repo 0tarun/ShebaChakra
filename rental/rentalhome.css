@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header Section */
+header {
+    background-color: #c0c4c8;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 1.5cm;
+}
+
+.logo {
+    height: 100px;
+    margin-right: 5px;
+}
+
+.site-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2b4c2d;
+    margin-right: auto;
+}
+
+.site-title span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #4e6e4c;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 30px; /* Makes the entire search bar rounded */
+    overflow: hidden;
+    padding: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional for better appearance */
+}
+
+.search-bar input {
+    border: none;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 14px;
+    flex-grow: 1;
+    border-radius: 30px 0 0 30px; /* Makes the left side of the input rounded */
+}
+
+.search-bar button {
+    background-color: #2b4c2d;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    border-radius: 0 30px 30px 0; /* Makes the right side of the button rounded */
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #1f3922;
+}
+
+
+/* Main Section */
+main {
+    padding: 50px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 38cm;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.find-home-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.home-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.home-option:hover {
+    background-color: #d6d6d6;
+    transform: scale(1.05);
+}
+
+.home-option img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.home-option span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+
+.properties-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.property-card {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.property-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 15px;
+}
+
+.property-type {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4CAF50;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.property-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+.property-location {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.property-details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.property-details li {
+    margin-bottom: 10px;
+}
+
+.view-details {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.view-details:hover {
+    background-color: #45a049;
+}
+
+/* Footer Section */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 6cm;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 280px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.footer-section ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 15px;
+}
