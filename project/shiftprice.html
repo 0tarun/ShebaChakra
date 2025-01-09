@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Selection Form</title>
+    <link rel="stylesheet" href="shiftprice.css">
+</head>
+<body>
+<main>
+    <h1>Where are you moving?</h1>
+    <div class="tabs">
+        <button class="tab-button active" data-tab="inside-city">Inside City</button>
+        <button class="tab-button" data-tab="outside-city">Outside City</button>
+    </div>
+
+    <!-- Inside City Form -->
+    <form class="form-container" id="inside-form" style="display: block;">
+        <div class="form-group">
+            <label for="district-inside">Select District</label>
+            <select id="district-inside">
+                <option value="" disabled selected>Select District</option>
+                <!-- Districts will be dynamically populated -->
+            </select>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="moving-from-inside">Moving From</label>
+                <select id="moving-from-inside" disabled>
+                    <option value="" disabled selected>Moving From</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="moving-to-inside">Moving To</label>
+                <select id="moving-to-inside" disabled>
+                    <option value="" disabled selected>Moving To</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="shifting-date-inside">Shifting Date</label>
+            <input type="date" id="shifting-date-inside">
+        </div>
+        <div class="form-group">
+            <label for="item-description-outside">Item Description</label>
+            <textarea id="item-description-outside" placeholder="King size beds, dining tables, etc."></textarea>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name-inside">Name</label>
+                <input type="text" id="name-inside" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="phone-inside">Phone</label>
+                <input type="tel" id="phone-inside" placeholder="Phone">
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="button" class="check-button" onclick="validateForm('inside-form')">Check Prices</button>
+            <button type="button" class="close-button">Close</button>
+        </div>
+    </form>
+
+    <!-- Outside City Form -->
+    <form class="form-container" id="outside-form" style="display: none;">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="moving-from-outside">Moving From</label>
+                <select id="moving-from-outside">
+                    <option value="" disabled selected>Moving From</option>
+                    <!-- All districts will be populated -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="moving-to-outside">Moving To</label>
+                <select id="moving-to-outside">
+                    <option value="" disabled selected>Moving To</option>
+                    <!-- All districts will be populated -->
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="shifting-date-outside">Shifting Date</label>
+            <input type="date" id="shifting-date-outside">
+        </div>
+        <div class="form-group">
+            <label for="item-description-outside">Item Description</label>
+            <textarea id="item-description-outside" placeholder="King size beds, dining tables, etc."></textarea>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name-outside">Name</label>
+                <input type="text" id="name-outside" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="phone-outside">Phone</label>
+                <input type="tel" id="phone-outside" placeholder="Phone">
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="button" class="check-button" onclick="validateForm('inside-form')">Check Prices</button>
+            <button type="button" class="close-button">Close</button>
+        </div>
+    </form>
+</main>
+<script src="shiftprice.js"></script>
+
+<script>
+    // Bangladesh Districts and Thanas
+    const districtThanaData = {
+        
+    "Bagerhat": ["Chitalmari", "Fakirhat", "Kachua", "Mollahat"],
+    "Bandarban": ["Thanchi", "Ruma", "Lama", "Rowangchhari"],
+    "Barguna": ["Amtali", "Patharghata", "Betagi", "Bamna"],
+    "Barishal": ["Bakerganj", "Mehendiganj", "Banaripara", "Muladi"],
+    "Bhola": ["Char Fasson", "Monpura", "Borhanuddin", "Lalmohan"],
+    "Bogra": ["Gabtali", "Sherpur", "Shibganj", "Sariakandi"],
+    "Brahmanbaria": ["Ashuganj", "Bancharampur", "Kasba", "Sarail"],
+    "Chandpur": ["Haimchar", "Matlab", "Shahrasti", "Faridganj"],
+    "Chapai Nawabganj": ["Shibganj", "Bholahat", "Nachole", "Gomastapur"],
+    "Chattogram": ["Agrabad", "Pahartali", "Kotwali", "Patenga"],
+    "Chuadanga": ["Damurhuda", "Alamdanga", "Jibannagar"],
+    "Cox's Bazar": ["Teknaf", "Ramu", "Chakaria", "Ukhiya"],
+    "Dhaka": ["Dhanmondi", "Gulshan", "Mirpur", "Uttara", "Motijheel"],
+    "Dinajpur": ["Birampur", "Parbatipur", "Fulbari", "Bochaganj"],
+    "Faridpur": ["Bhanga", "Saltha", "Nagarkanda", "Charbhadrasan"],
+    "Feni": ["Chhagalnaiya", "Parshuram", "Daganbhuiyan"],
+    "Gaibandha": ["Sadullapur", "Palashbari", "Gobindaganj", "Sundarganj"],
+    "Gazipur": ["Tongi", "Kaliakair", "Kapasia", "Sreepur"],
+    "Gopalganj": ["Tungipara", "Kotalipara", "Muksudpur"],
+    "Habiganj": ["Ajmiriganj", "Baniachong", "Chunarughat", "Lakhai"],
+    "Jamalpur": ["Bakshiganj", "Dewanganj", "Islampur", "Madarganj"],
+    "Jashore": ["Benapole", "Bagharpara", "Manirampur", "Keshabpur"],
+    "Jhalokati": ["Nalchity", "Rajapur", "Kathalia"],
+    "Jhenaidah": ["Maheshpur", "Shailkupa", "Kotchandpur"],
+    "Khagrachari": ["Ramgarh", "Matiranga", "Lakshmichhari", "Dighinala"],
+    "Khulna": ["Sonadanga", "Khalishpur", "Daulatpur", "Batiaghata"],
+    "Kishoreganj": ["Bhairab", "Bajitpur", "Hossainpur", "Karimganj"],
+    "Kurigram": ["Ulipur", "Chilmari", "Nageshwari", "Rajarhat"],
+    "Kushtia": ["Bheramara", "Kumarkhali", "Daulatpur", "Mirpur"],
+    "Lakshmipur": ["Raipur", "Ramganj", "Ramgati", "Kamalnagar"],
+    "Lalmonirhat": ["Patgram", "Kaliganj", "Hatibandha"],
+    "Madaripur": ["Rajoir", "Shibchar", "Kalkini"],
+    "Magura": ["Mohammadpur", "Sreepur", "Shalikha"],
+    "Manikganj": ["Saturia", "Singair", "Shibalaya", "Ghior"],
+    "Meherpur": ["Gangni", "Mujibnagar"],
+    "Moulvibazar": ["Srimangal", "Kamalganj", "Kulaura", "Juri"],
+    "Munshiganj": ["Sirajdikhan", "Sreenagar", "Gazaria"],
+    "Mymensingh": ["Muktagachha", "Trishal", "Ishwarganj", "Gafargaon"],
+    "Naogaon": ["Porsha", "Sapahar", "Niamatpur", "Manda"],
+    "Narail": ["Kalia", "Lohagara", "Naragati"],
+    "Narayanganj": ["Siddhirganj", "Sonargaon", "Araihazar"],
+    "Narsingdi": ["Belabo", "Monohardi", "Raipura", "Shibpur"],
+    "Natore": ["Bagatipara", "Gurudaspur", "Singra", "Baraigram"],
+    "Netrokona": ["Atpara", "Barhatta", "Kendua", "Kalmakanda"],
+    "Nilphamari": ["Domar", "Jaldhaka", "Kishoreganj", "Saidpur"],
+    "Noakhali": ["Begumganj", "Senbagh", "Hatiya", "Subarnachar"],
+    "Pabna": ["Ishwardi", "Bera", "Santhia", "Sujanagar"],
+    "Panchagarh": ["Debiganj", "Tetulia", "Boda", "Atwari"],
+    "Patuakhali": ["Bauphal", "Galachipa", "Kalapara", "Mirzaganj"],
+    "Pirojpur": ["Bhandaria", "Mathbaria", "Nazirpur", "Kawkhali"],
+    "Rajbari": ["Pangsha", "Kalukhali", "Baliakandi"],
+    "Rajshahi": ["Boalia", "Motihar", "Paba", "Godagari"],
+    "Rangamati": ["Kaptai", "Barkal", "Baghaichhari", "Langadu"],
+    "Rangpur": ["Pirgachha", "Mithapukur", "Gangachara", "Kaunia"],
+    "Satkhira": ["Kaliganj", "Debhata", "Shyamnagar", "Tala"],
+    "Shariatpur": ["Damudya", "Bhedarganj", "Gosairhat", "Naria"],
+    "Sherpur": ["Nalitabari", "Jhenaigati", "Sreebardi", "Nakla"],
+    "Sirajganj": ["Ullapara", "Kazipur", "Tarash", "Raiganj"],
+    "Sunamganj": ["Derai", "Tahirpur", "Dharampasha", "Jagannathpur"],
+    "Sylhet": ["Zindabazar", "Bandarbazar", "Amberkhana", "South Surma"],
+    "Tangail": ["Sakhipur", "Basail", "Ghatail", "Nagarpur"],
+    "Thakurgaon": ["Ruhea", "Pirganj", "Ranisankail", "Haripur", "Baliadangi"]
+
+
+    };
+
+    const populateDistricts = (districtSelectId) => {
+        const districtSelect = document.getElementById(districtSelectId);
+        districtSelect.innerHTML = '<option value="" disabled selected>Select District</option>';
+        for (let district in districtThanaData) {
+            const option = document.createElement('option');
+            option.value = district;
+            option.textContent = district;
+            districtSelect.appendChild(option);
+        }
+    };
+
+    const updateThanas = (districtSelectId, movingFromId, movingToId) => {
+        const districtSelect = document.getElementById(districtSelectId);
+        const movingFrom = document.getElementById(movingFromId);
+        const movingTo = document.getElementById(movingToId);
+
+        districtSelect.addEventListener('change', () => {
+            const selectedDistrict = districtSelect.value;
+            const thanas = districtThanaData[selectedDistrict] || [];
+
+            movingFrom.innerHTML = '<option value="" disabled selected>Moving From</option>';
+            movingTo.innerHTML = '<option value="" disabled selected>Moving To</option>';
+
+            thanas.forEach(thana => {
+                const option = document.createElement('option');
+                option.value = thana;
+                option.textContent = thana;
+                movingFrom.appendChild(option.cloneNode(true));
+                movingTo.appendChild(option.cloneNode(true));
+            });
+
+            movingFrom.disabled = false;
+            movingTo.disabled = false;
+        });
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Populate Inside City Districts
+        populateDistricts('district-inside');
+        updateThanas('district-inside', 'moving-from-inside', 'moving-to-inside');
+
+        // Populate Outside City Districts
+        populateDistricts('moving-from-outside');
+        populateDistricts('moving-to-outside');
+    });
+
+    const tabs = document.querySelectorAll('.tab-button');
+    const insideForm = document.getElementById('inside-form');
+    const outsideForm = document.getElementById('outside-form');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            if (tab.dataset.tab === 'inside-city') {
+                insideForm.style.display = 'block';
+                outsideForm.style.display = 'none';
+            } else {
+                insideForm.style.display = 'none';
+                outsideForm.style.display = 'block';
+            }
+        });
+    });
+</script>
+</body>
+</html>

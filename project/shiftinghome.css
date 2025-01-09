@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header Section */
+header {
+    background-color: #c0c4c8;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 1.5cm;
+}
+
+.logo {
+    height: 100px;
+    margin-right: 5px;
+}
+
+.site-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2b4c2d;
+    margin-right: auto;
+}
+
+.site-title span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #4e6e4c;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 30px; /* Makes the entire search bar rounded */
+    overflow: hidden;
+    padding: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional for better appearance */
+}
+
+.search-bar input {
+    border: none;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 14px;
+    flex-grow: 1;
+    border-radius: 30px 0 0 30px; /* Makes the left side of the input rounded */
+}
+
+.search-bar button {
+    background-color: #2b4c2d;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    border-radius: 0 30px 30px 0; /* Makes the right side of the button rounded */
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #1f3922;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.nav-links a img {
+    width: 20px;
+    height: 20px;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 20px;
+    text-align: center;
+    height: 20cm;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.options-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    background-color: #fff8d8;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.option:hover {
+    border-color: #007bff;
+}
+
+.option img {
+    width: 48px;
+    height: 48px;
+    margin-right: 15px;
+}
+
+.option-details {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.option-details h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #444;
+}
+
+.option-details p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+/* Footer Section */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 6cm;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 280px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.footer-section ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 15px;
+}
