@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Page</title>
+    <link rel="stylesheet" href="Furniture.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Furniture Store</h1>
+        <p>Find the perfect furniture for your home or office</p>
+    </header>
+
+    <section class="filter-section">
+        <div class="filter-container">
+            <h2>Filter Your Search</h2>
+            <form>
+                <div class="filter-group">
+                    <label for="type">Furniture Type:</label>
+                    <select id="type" name="type">
+                        <option value="new">New</option>
+                        <option value="pre-owned">Pre-owned</option>
+                        <option value="all">All</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category">
+                        <option value="sofa">Sofa</option>
+                        <option value="bed">Bed</option>
+                        <option value="table">Table</option>
+                        <option value="chair">Chair</option>
+                        <option value="cabinet">Cabinet</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price">Price Range:</label>
+                    <input type="range" id="price" name="price" min="100" max="5000" step="100"
+                        oninput="priceOutput.value = this.value">
+                    <span id="priceOutput">2500</span>
+                </div>
+                <button type="submit" class="filter-button">Apply Filters</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="furniture-list">
+        <h2>Furniture Collection</h2>
+        <div class="furniture-container">
+            <!-- Sample Furniture Item -->
+            <div class="furniture-item">
+                <img src="sofa.jpg" alt="Sofa">
+                <h3>Modern Sofa</h3>
+                <p class="price">$1,200</p>
+                <button class="details-button">View Details</button>
+            </div>
+            <div class="furniture-item">
+                <img src="table.jpg" alt="Table">
+                <h3>Dining Table</h3>
+                <p class="price">$750</p>
+                <button class="details-button">View Details</button>
+            </div>
+            <div class="furniture-item">
+                <img src="bed.jpg" alt="Bed">
+                <h3>Queen Bed</h3>
+                <p class="price">$1,800</p>
+                <button class="details-button">View Details</button>
+            </div>
+            <!-- Add more furniture items as needed -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Furniture Store. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
