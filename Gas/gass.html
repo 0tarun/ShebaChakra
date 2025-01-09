@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Delivery Services</title>
+    <link rel="stylesheet" href="gass.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="SHEBACHAKRA Logo">
+            <span>SHEBACHAKRA<br>Multi-Service Aggregator</span>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+        </div>
+        <nav class="menu">
+            <a href="#message">Message</a>
+            <a href="#home">Home</a>
+            <a href="#cart">Cart</a>
+            <a href="#login">Login</a>
+        </nav>
+    </header>
+
+    <div class="services">
+        <div class="service">
+            <h3>Jamuna Gas</h3>
+            <img src="jamuna.jpg" alt="Jamuna" style="width:50%; height:50%;">
+            <p class="price">1500 tk</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        
+        <div class="service">
+            <h3>Basundhara Gas</h3>
+            <img src="basundhara.jpg" alt="Basundhara" style="width:50%; height:50%;">
+            <p class="price">1450 tk</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="service">
+            <h3>Beximco Gas</h3>
+            <img src="beximco.jpeg" alt="Beximco" style="width:50%; height:50%;">
+            <p class="price">1500 tk</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        
+    </div>
+
+    <div class="services">
+        <div class="service">
+            <h3>Delta Gas</h3>
+            <img src="delta.jpeg" alt="Delta" style="width:50%; height:50%;">
+            <p class="price">1400 tk</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="service">
+            <h3>Omera Gas</h3>
+            <img src="omera.png" alt="Omera" style="width:50%; height:50%;">
+            <p class="price">1450 tk</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="service">
+            <h3>Petromax Gas</h3>
+            <img src="petromax.png" alt="AC Repair Service" style="width:50%; height:50%;">
+            <p class="price">1450 tk</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="services">
+        <div class="service">
+            <h3>Fresh Gas</h3>
+            <img src="fresh.png" alt="Fresh" style="width:50%; height:50%;">
+            <p class="price">1500 tk</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="service">
+            <h3>Orion Gas</h3>
+            <img src="orion.png" alt="Orion Gas" style="width:50%; height:50%;">
+            <p class="price">1450 tk</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="service">
+            <h3>LAUGFS Gas</h3>
+            <img src="laugfs.jpeg" alt="LAUGFS Gas" style="width:50%; height:50%;">
+            <p class="price">1500 tk per service</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <a href="cart.html" class="cart" id="cart">0</a>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById('cart').textContent = cartCount;
+        }
+    </script>
+</body>
+</html>
