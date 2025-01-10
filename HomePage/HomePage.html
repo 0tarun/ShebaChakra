@@ -9,118 +9,128 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo-title">
-            <img src="/Images/logo.png" alt="BD Assistant Logo" class="logo">
-            <h1>Sheba Chakra</h1>
+<header>
+    <div class="logo-title">
+        <img src="/Images/logo.png" alt="Logo" class="logo">
+        <h1>Sheba Chakra</h1>
+    </div>
+    <nav>
+        <a href="/HomePage/HomePage.html">Home</a>
+        <a href="#">All Services</a>
+        <a href="#">My Profile</a>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        <div class="auth-buttons">
+            <a href="/Login_register/Login.html" class="login">Login</a>
+            <a href="/Login_register/Register.html" class="register">Register</a>
         </div>
-        <nav>
-            <input type="text" placeholder="Search...">
-            <a href="#">Message</a>
-            <a href="/HomePage/HomePage.html">Home</a>
-            <a href="#">Cart</a>
-            <a href="/Login&register/Login.html">Profile</a>
-        </nav>
-    </header>
+    </nav>
+</header>
 
-    <section class="banner">
-        <!-- <div class="tagline">
-            <p>Find quality shifting services. Access smart technicians. Rent home/office easily. Buy chemical-free
-                village produce groceries.</p>
-        </div> -->
-        <!-- <img src="web_cover_final-01_eench2.jpg" alt="Banner Image"> -->
-    </section>
-<!-- services section -->
 
-    <section class="services">
-        <h2>Services</h2>
-        <div class="services-grid">
-            <div>
-                <a href="/work in rental/rentalhome.html">
+
+  
+    <!-- offer section -->
+<section class="services">
+    <!-- <h2>Services</h2> -->
+    <div class="services-grid">
+        <div class="service-item">
+            <a href="/rental/rentalhome.html">
                 <img src="/Images/house.png" alt="Rentals">
                 <p>Rentals</p>
-                </a>
-                
-            </div>
-            <div>
-                <a href="/project/shiftinghome.html">
+                <div class="tooltip">Find the best rental options here!</div>
+            </a>
+        </div>
+        
+        <div class="service-item">
+            <a href="/project/shiftinghome.html">
                 <img src="/Images/moving-home.png" alt="Shifting">
                 <p>Shifting</p>
-                </a>
-            </div>
-            <div> <a href="/technecian/t.html">
+                <div class="tooltip">Get professional shifting services!</div>
+            </a>
+        </div>
+    
+        <div class="service-item">
+            <a href="/technecian/t.html">
                 <img src="/Images/technician.png" alt="Technicians">
                 <p>Technicians</p>
-                </a>
-            </div>
-            <div>
-                <a href="/Grocerys/grocery.html">
+                <div class="tooltip">Expert technicians at your service!</div>
+            </a>
+        </div>
+        <div class="service-item">
+            <a href="/Grocerys/groceryhome.html">
                 <img src="/Images/grocery.png" alt="Grocery">
                 <p>Grocery</p>
-                </a>
-            </div>
-            <div><a href="/Furniture/Furniture.html">
+                <div class="tooltip">Fresh groceries delivered to you!</div>
+            </a>
+        </div>
+        <div class="service-item">
+            <a href="/Furniture/furniturehome.html">
                 <img src="/Images/furniture.png" alt="Furniture">
                 <p>Furniture</p>
-                </a>
-            </div>
-            <div> <a href="/Cleaning_Service/cleaningService.html">
-                <img src="/Images/cleaner.png" alt="Cleaning">
-                <p>Cleaning</p>
-                </a>
-            </div>
-
-            <div>
-                <a href="/HealthCare/healthCare.html">
+                <div class="tooltip">Quality furniture for your home!</div>
+            </a>
+        </div>
+        <div class="service-item">
+            <a href="/HealthCare/healthCare.html">
                 <img src="/Images/healthcare.png" alt="HealthCare">
-                <p>HealthCare</p>
-                </a>
-            </div>
-
-            <div>
-                <a href="/Gas/gass.html">
-                <img src="/Images/gas-cylinder.png" alt="Gas Cylinder">
-                <p>Gas Cylinder</p>
-                </a>
-            </div>
+                <p>healthCare</p>
+                <div class="tooltip">Quality healthCare services for your home!</div>
+            </a>
         </div>
-    </section>
-
-    <!-- offer section -->
-    <section class="best-offers">
-        <h2>Best Offers</h2>
-        <div class="offers-container">
-            <!-- Offer Card 1 -->
-            <div class="offer-card">
-                <img src="https://static.vecteezy.com/system/resources/previews/004/596/070/non_2x/sofa-delivery-or-moving-van-furniture-service-concept-in-flat-cartoon-illustration-on-white-background-vector.jpg" alt="Milk Delivery">
-                <h3>Furniture Delivery</h3>
-                <p>Free!! Delivery Only Mirpur Area</p>
-            </div>
-            <!-- Offer Card 2 -->
-            <div class="offer-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFf9obNV29Eq_K6XqJwJly-77LOMiexlo6w&s" alt="Rent your home/office/mess">
-                <h3>Rent your home/office/mess</h3>
-                <p>Free Of Costs!</p>
-            </div>
-            <!-- Offer Card 3 -->
-            <div class="offer-card">
-                <img src="https://bdassistant.com/assets/image/gas-postar.jpg" alt="Special Gas Delivery Offer">
-                <h3>Special Gas Delivery Offer</h3>
-                <p>Free Home Delivery!</p>
-            </div>
-            <!-- Offer Card 4 -->
-            <div class="offer-card">
-                <img src="https://www.dorkary.com/cloud/archives/2020/02/rang-pur.png" alt="Shifting Service">
-                <h3>Shifting Service</h3>
-                <p>On Demand</p>
-            </div>
+        <div class="service-item">
+            <a href="/Cleaning_Service/cleaningService.html">
+                <img src="/Images/cleaner.png" alt="Cleaning_Service">
+                <p>Cleaning_Service</p>
+                <div class="tooltip">Quality Cleaning services for your home!</div>
+            </a>
         </div>
-    </section>
+        <div class="service-item">
+            <a href="/Gas/gass.html">
+                <img src="/Images/gas-cylinder.png" alt="gas-cylinder">
+                <p>gas-cylinder</p>
+                <div class="tooltip">Quality gas-cylinder for your home!</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- offer section -->
+<section class="best-offers">
+    <h2>Best Offers</h2>
+    <div class="offers-container">
+        <!-- Offer Card 1 -->
+        <div class="offer-card">
+            <img src="https://static.vecteezy.com/system/resources/previews/004/596/070/non_2x/sofa-delivery-or-moving-van-furniture-service-concept-in-flat-cartoon-illustration-on-white-background-vector.jpg"
+                alt="Milk Delivery">
+            <h3>Furniture Delivery</h3>
+            <p>Free!! Delivery Only Mirpur Area</p>
+        </div>
+        <!-- Offer Card 2 -->
+        <div class="offer-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFf9obNV29Eq_K6XqJwJly-77LOMiexlo6w&s"
+                alt="Rent your home/office/mess">
+            <h3>Rent your home/office/mess</h3>
+            <p>Free Of Costs!</p>
+        </div>
+        <!-- Offer Card 3 -->
+        <div class="offer-card">
+            <img src="https://bdassistant.com/assets/image/gas-postar.jpg" alt="Special Gas Delivery Offer">
+            <h3>Special Gas Delivery Offer</h3>
+            <p>Free Home Delivery!</p>
+        </div>
+        <!-- Offer Card 4 -->
+        <div class="offer-card">
+            <img src="https://www.dorkary.com/cloud/archives/2020/02/rang-pur.png" alt="Shifting Service">
+            <h3>Shifting Service</h3>
+            <p>On Demand</p>
+        </div>
+    </div>
+</section>
 
     <!-- How to get a service -->
     <section class="service-section">
         <div class="content">
-            <h1>How to Get a Service</h1>
+            <h2 class="head_h2">How to Get a Service</h2>
             <div class="row">
                 <div class="video-container">
                     <video controls poster="/Images/pg_top_section_mobile.png">
@@ -182,6 +192,7 @@
             </div>
         </div>
     </section>
+    <script src="/HomePage/home.js"></script> <!-- Replace with your JS path -->
 
 <!-- footer section -->
 
