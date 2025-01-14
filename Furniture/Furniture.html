@@ -4,78 +4,376 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furniture Page</title>
-    <link rel="stylesheet" href="Furniture.css">
+    <title>ShebaChakra Menu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="header">
-        <h1>Furniture Store</h1>
-        <p>Find the perfect furniture for your home or office</p>
+    <header>
+        <div class="logo">ShebaChakra</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#Bed">Bed</a></li>
+                <li><a href="#Chair">Chair</a></li>
+                <li><a href="#Dying Table">Dying Table</a></li>
+                <li><a href="#Reading Table">Reading Table</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <img src="images/trolley.png" alt="Cart" class="cart-icon">
+            <span>Cart</span>
+        </div>
     </header>
 
-    <section class="filter-section">
-        <div class="filter-container">
-            <h2>Filter Your Search</h2>
-            <form>
-                <div class="filter-group">
-                    <label for="type">Furniture Type:</label>
-                    <select id="type" name="type">
-                        <option value="new">New</option>
-                        <option value="pre-owned">Pre-owned</option>
-                        <option value="all">All</option>
-                    </select>
+    <div class="section" id="Bed">
+        <h2>Bed</h2>
+        <div class="product-grid">
+            <div class="modal" id="productModal">
+                <div class="modal-content">
+                    <span class="close-button" id="closeModal">×</span>
+                    <img id="modalImage" src="" alt="Product Image">
+                    <h3 id="modalTitle">Product Title</h3>
+                    <p id="modalPrice">Price: ৳</p>
+                    <p id="modalDetails">Details: </p>
+                    <button class="buy-button">Buy Now</button>
                 </div>
-                <div class="filter-group">
-                    <label for="category">Category:</label>
-                    <select id="category" name="category">
-                        <option value="sofa">Sofa</option>
-                        <option value="bed">Bed</option>
-                        <option value="table">Table</option>
-                        <option value="chair">Chair</option>
-                        <option value="cabinet">Cabinet</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="price">Price Range:</label>
-                    <input type="range" id="price" name="price" min="100" max="5000" step="100"
-                        oninput="priceOutput.value = this.value">
-                    <span id="priceOutput">2500</span>
-                </div>
-                <button type="submit" class="filter-button">Apply Filters</button>
-            </form>
-        </div>
-    </section>
+            </div>
 
-    <section class="furniture-list">
-        <h2>Furniture Collection</h2>
-        <div class="furniture-container">
-            <!-- Sample Furniture Item -->
-            <div class="furniture-item">
-                <img src="sofa.jpg" alt="Sofa">
-                <h3>Modern Sofa</h3>
-                <p class="price">$1,200</p>
-                <button class="details-button">View Details</button>
+            <div class="product">
+                <img src="furniture_image/post-bed-10.jpg" alt="poster-bed-10">
+                <h3>Post Bed</h3>
+                <div class="price">৳5000</div>
+                <button class="view-details">View Details</button>
             </div>
-            <div class="furniture-item">
-                <img src="table.jpg" alt="Table">
-                <h3>Dining Table</h3>
-                <p class="price">$750</p>
-                <button class="details-button">View Details</button>
-            </div>
-            <div class="furniture-item">
-                <img src="bed.jpg" alt="Bed">
-                <h3>Queen Bed</h3>
-                <p class="price">$1,800</p>
-                <button class="details-button">View Details</button>
-            </div>
-            <!-- Add more furniture items as needed -->
-        </div>
-    </section>
 
-    <footer class="footer">
-        <p>© 2025 Furniture Store. All rights reserved.</p>
-    </footer>
+            <div class="product">
+                <img src="furniture_image/queen-bed-11.jpg" alt="quin-bed-10">
+                <h3></h3>
+                <div class="price">৳12000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/loft-bed-10.jpg" alt="loft-bed-10">
+                <h3></h3>
+                <div class="price">৳20000</div>
+                <button>Buy</button>
+            </div>
+
+
+            <div class="product">
+                <img src="furniture_image/twin-bed-10.jpg" alt="twin-bed-10">
+                <h3></h3>
+                <div class="price">৳15000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/post-bed-10.jpg" alt="poster-bed-10">
+                <h3></h3>
+                <div class="price">৳5000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/queen-bed-11.jpg" alt="quin-bed-10">
+                <h3></h3>
+                <div class="price">৳12000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/loft-bed-10.jpg" alt="loft-bed-10">
+                <h3></h3>
+                <div class="price">৳20000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/twin-bed-10.jpg" alt="twin-bed-10">
+                <h3></h3>
+                <div class="price">৳15000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/post-bed-10.jpg" alt="poster-bed-10">
+                <h3></h3>
+                <div class="price">৳5000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/queen-bed-11.jpg" alt="quin-bed-10">
+                <h3></h3>
+                <div class="price">৳12000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/loft-bed-10.jpg" alt="loft-bed-10">
+                <h3></h3>
+                <div class="price">৳20000</div>
+                <button>Buy</button>
+            </div>
+            
+            
+            <div class="product">
+                <img src="furniture_image/twin-bed-10.jpg" alt="twin-bed-10">
+                <h3></h3>
+                <div class="price">৳15000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/post-bed-10.jpg" alt="poster-bed-10">
+                <h3></h3>
+                <div class="price">৳5000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/queen-bed-11.jpg" alt="quin-bed-10">
+                <h3></h3>
+                <div class="price">৳12000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/loft-bed-10.jpg" alt="loft-bed-10">
+                <h3></h3>
+                <div class="price">৳20000</div>
+                <button>Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="Chair">
+        <h2>Chair</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="furniture_image/thermaltake-u-comfort-black-red-gaming-chair-550x550.jpg.webp" alt="thermaltake-u-comfort-black-red-gaming-chair-550x550">
+                <h3></h3>
+                <div class="price">৳3000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/buy arm chair.jpeg" alt="buy arm chair">
+                <h3></h3>
+                <div class="price">৳4000</div>
+                <button>Buy</button>
+            </div>
+
+            <div class="product">
+                <img src="furniture_image/thermaltake-u-comfort-black-red-gaming-chair-550x550.jpg.webp"
+                    alt="thermaltake-u-comfort-black-red-gaming-chair-550x550">
+                <h3></h3>
+                <div class="price">৳3000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/buy arm chair.jpeg" alt="buy arm chair">
+                <h3></h3>
+                <div class="price">৳4000</div>
+                <button>Buy</button>
+            </div>
+
+            <div class="product">
+                <img src="furniture_image/thermaltake-u-comfort-black-red-gaming-chair-550x550.jpg.webp"
+                    alt="thermaltake-u-comfort-black-red-gaming-chair-550x550">
+                <h3></h3>
+                <div class="price">৳3000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/buy arm chair.jpeg" alt="buy arm chair">
+                <h3></h3>
+                <div class="price">৳4000</div>
+                <button>Buy</button>
+            </div>
+
+            <div class="product">
+                <img src="furniture_image/thermaltake-u-comfort-black-red-gaming-chair-550x550.jpg.webp"
+                    alt="thermaltake-u-comfort-black-red-gaming-chair-550x550">
+                <h3></h3>
+                <div class="price">৳3000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/buy arm chair.jpeg" alt="buy arm chair">
+                <h3></h3>
+                <div class="price">৳4000</div>
+                <button>Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="Dying Table">
+        <h2>Dying Table</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="furniture_image/moden cili dyning.jpg" alt="moden cili dyning">
+                <h3></h3>
+                <div class="price">৳20000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/marble dining table.jpeg" alt="marble dining table">
+                <h3></h3>
+                <div class="price">৳20000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/modern space saving marble top round dining table.jpeg" alt="modern space saving marble top round dining table">
+                <h3></h3>
+                <div class="price">৳20000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/moden cili dyning.jpg" alt="moden cili dyning">
+                <h3></h3>
+                <div class="price">৳20000</div>
+                <button>Buy</button>
+            </div>
+
+            <div class="product">
+                <img src="furniture_image/marble dining table.jpeg" alt="marble dining table">
+                <h3></h3>
+                <div class="price">৳20000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/modern space saving marble top round dining table.jpeg"
+                    alt="modern space saving marble top round dining table">
+                <h3></h3>
+                <div class="price">৳20000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/moden cili dyning.jpg" alt="moden cili dyning">
+                <h3></h3>
+                <div class="price">৳20000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/moden cili dyning.jpg" alt="moden cili dyning">
+                <h3></h3>
+                <div class="price">৳20000</div>
+                <button>Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="Reading Table">
+        <h2>Reading Table</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="furniture_image/Zits-105_1.png" alt="Zits-105_1">
+                <h3></h3>
+                <div class="price">৳9000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/fency_2.jpeg" alt="fency_2">
+                <h3></h3>
+                <div class="price">৳9600</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/TRT-0203-T-Y_3.webp" alt="TRT-0203-T-Y_3">
+                <h3></h3>
+                <div class="price">৳1000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/new_4.jpeg" alt="new_4">
+                <h3></h3>
+                <div class="price">৳48000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/reading-table-set-2.1_5.png" alt="reading-table-set-2.1_5">
+                <h3></h3>
+                <div class="price">৳3944</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/fency_2.jpeg" alt="fency_2">
+                <h3></h3>
+                <div class="price">৳9600</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/TRT-0203-T-Y_3.webp" alt="TRT-0203-T-Y_3">
+                <h3></h3>
+                <div class="price">৳1000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/new_4.jpeg" alt="new_4">
+                <h3></h3>
+                <div class="price">৳48000</div>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="furniture_image/reading-table-set-2.1_5.png" alt="reading-table-set-2.1_5">
+                <h3></h3>
+                <div class="price">৳3944</div>
+                <button>Buy</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal for product details -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img id="productImage" src="" alt="Product Image" style="width: 100%; max-height: 300px; object-fit: cover;">
+            <h3 id="productTitle"></h3>
+            <p id="productDescription"></p>
+            <div id="productPrice"></div>
+        </div>
+    </div>
+
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+            const viewDetailsButtons = document.querySelectorAll(".view-details");
+            const modal = document.getElementById("detailsModal");
+            const modalOverlay = document.querySelector(".modal-overlay");
+            const closeModal = document.querySelector(".close-btn");
+            const modalImage = document.getElementById("productImage");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalPrice = document.getElementById("productPrice");
+            const modalDetails = document.getElementById("productDescription");
+
+            // Open modal when 'View Details' is clicked
+            viewDetailsButtons.forEach(button => {
+                button.addEventListener("click", (event) => {
+                    const product = event.target.closest(".product");
+
+                    const imgSrc = product.querySelector("img").src;
+                    const title = product.querySelector("h3").textContent || "Product Title";
+                    const price = product.querySelector(".price").textContent;
+                    const details = "This is a detailed description of the product."; // Replace with actual details
+
+                    // Populate modal with product details
+                    modalImage.src = imgSrc;
+                    modalTitle.textContent = title;
+                    modalPrice.textContent = price;
+                    modalDetails.textContent = details;
+
+                    // Show modal and overlay
+                    modal.classList.add("show");
+                    modalOverlay.classList.add("show");
+                });
+            });
+
+            // Close modal
+            closeModal.addEventListener("click", () => {
+                modal.classList.remove("show");
+                modalOverlay.classList.remove("show");
+            });
+
+            // Close modal when clicking on the overlay
+            modalOverlay.addEventListener("click", () => {
+                modal.classList.remove("show");
+                modalOverlay.classList.remove("show");
+            });
+        });
+
+
+    </script>
 </body>
 
 </html>

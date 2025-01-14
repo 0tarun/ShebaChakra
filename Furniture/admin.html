@@ -1,0 +1,27 @@
+<!-- service_provider.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Provider</title>
+</head>
+
+<body>
+    <h1>Add a Service</h1>
+    <form action="add_service.php" method="POST">
+        <label for="service_name">Service Name:</label><br>
+        <input type="text" id="service_name" name="service_name" required><br><br>
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" required></textarea><br><br>
+
+        <label for="price">Price:</label><br>
+        <input type="number" id="price" name="price" required><br><br>
+
+        <button type="submit">Add Service</button>
+    </form>
+</body>
+
+</html>
